@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:chip_list_choice/chip_list_choice.dart';
+import 'package:chip_list_choice/ChipListChoice.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('chip_list_choice');

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:chip_list_choice/chip_list_choice.dart';
+import 'package:chip_list_choice/ChipListChoice.dart';
 
 void main() => runApp(MyApp());
 
