@@ -1,0 +1,22 @@
+PODS:
+  - chip_list_choice (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - chip_list_choice (from `.symlinks/plugins/chip_list_choice/ios`)
+  - Flutter (from `.symlinks/flutter/ios`)
+
+EXTERNAL SOURCES:
+  chip_list_choice:
+    :path: ".symlinks/plugins/chip_list_choice/ios"
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+
+SPEC CHECKSUMS:
+  chip_list_choice: 86af8da3ce4ce7846f297de6b920c806aa0959c9
+  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
+
+PODFILE CHECKSUM: ebd43b443038e611b86ede96e613bd6033c49497
+
+COCOAPODS: 1.6.2

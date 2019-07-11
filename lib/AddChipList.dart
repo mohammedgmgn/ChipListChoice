@@ -28,10 +28,12 @@ class AddChipListState extends State<AddChipList> implements CheckChangesListene
 
   @override
   Widget build(BuildContext context) {
-    return getAddChepWidget();
+    return Container(
+        padding: EdgeInsets.symmetric(vertical: 200),
+        child: Center(child: getAddChipWidget()));
   }
 
-  Widget getAddChepWidget() {
+  Widget getAddChipWidget() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -44,8 +46,14 @@ class AddChipListState extends State<AddChipList> implements CheckChangesListene
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text(widget.title),
-              Icon(Icons.add,color: widget.color,)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Text(widget.title),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Icon(Icons.add,color: widget.color,),
+              )
             ],
 
           ),
@@ -54,6 +62,7 @@ class AddChipListState extends State<AddChipList> implements CheckChangesListene
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: getChips(selectedUsers),
         )
+
 
 
         // SizedBox(height: 30.0),
@@ -166,11 +175,6 @@ class AddChipListState extends State<AddChipList> implements CheckChangesListene
                         Navigator.pop(context);
 
                       });
-/*
-                      Navigator.pop(context);
-                      widget.finalListResult(widget.usersDataSet);
-                      Navigator.pop(context);
-*/
 
 
 
@@ -207,29 +211,3 @@ class AddChipListState extends State<AddChipList> implements CheckChangesListene
 
 
 }
-/*
-List<User> users = [
-  User(name: "Mohammed", isChecked: false),
-  User(name: "Ahmed", isChecked: false),
-  User(name: "Mahmoud", isChecked: false),
-  User(name: "Ibrahim", isChecked: false),
-  User(name: "essam", isChecked: false),
-  User(name: "ayoup", isChecked: false),
-  User(name: "bola", isChecked: false),
-  User(name: "salah", isChecked: false),
-  User(name: "mohsen", isChecked: false),
-  User(name: "eman", isChecked: false),
-  User(name: "sara", isChecked: false),
-  User(name: "mahmoud", isChecked: false),
-  User(name: "Ibrahim", isChecked: false),
-
-];
-
-
-class User {
-  bool isChecked;
-  String name;
-
-  User({this.isChecked = false, this.name});
-}
-*/
