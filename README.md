@@ -3,8 +3,6 @@
 # ChipListChoice
 ![Output sample](https://github.com/mohammedgmgn/ChipListChoice/blob/master/finaldemo%20(1).gif)
 
-
-
 ## Contributing
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/mohammedgmgn/ChipListChoice/issues)
 
