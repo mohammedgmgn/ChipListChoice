@@ -12,7 +12,7 @@ class CustomCheckBox<T> extends StatefulWidget {
 
   CustomCheckBox({@required this.checked,
     this.changesListenerWithData,
-    this.color,
+    this.color=Colors.cyan,
     this.data,
     this.checkChangesWithoutData, this.width, this.hight});
 
@@ -27,9 +27,9 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
     return IconButton(
         icon: Container(
             width: widget.width,
-            color: widget.color,
+         //   color: widget.color,
             child: Icon(widget.checked ? Icons.check_box : Icons
-                .check_box_outline_blank)),
+                .check_box_outline_blank,color: widget.color)),
         /*Image.asset(
           width: widget.width,
           color: widget.color,

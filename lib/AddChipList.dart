@@ -123,7 +123,6 @@ class AddChipListState extends State<AddChipList> implements CheckChangesListene
 
   Widget getCheckBox(CheckBoxModel user) {
     return CustomCheckBox(
-        color: user.isChecked ? widget.color : Colors.grey,
         checked: user.isChecked,
         changesListenerWithData: this,
         width: 25,
