@@ -19,6 +19,7 @@ class ChipListSample1State extends State<ChipListSample1> {
         title: "Users",
         usersDataSet: users.toSet(),
         finalListResult: _finalBeneficiaryListSelection,
+
         color: Colors.cyan);
   }
 
