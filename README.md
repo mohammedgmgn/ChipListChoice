@@ -1,6 +1,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7d41a28a6774e6ab0b8ace9cab2706b)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mohammedgmgn/ChipListChoice&amp;utm_campaign=Badge_Grade)
 
 # ChipListChoice
+![Output sample](https://github.com/mohammedgmgn/ChipListChoice/blob/master/finaldemo%20(1).gif)
 
 
 
