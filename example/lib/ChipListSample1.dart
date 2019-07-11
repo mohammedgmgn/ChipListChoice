@@ -1,6 +1,4 @@
 import 'package:chip_list_choice/ChipListChoice.dart';
-import 'package:chip_list_choice/CheckBoxModel.dart';
-import 'package:chip_list_choice/ChipListChoice.dart';
 import 'package:flutter/material.dart';
 
 import 'UserModel.dart';
@@ -18,12 +16,23 @@ class ChipListSample1State extends State<ChipListSample1> {
     return ChipListChoice(
         title: "Users",
         usersDataSet: users.toSet(),
-        finalListResult: _finalBeneficiaryListSelection,
-
+        finalListResult: _finalListSelection,
         color: Colors.cyan);
   }
 
-  _finalBeneficiaryListSelection(dynamic finalSelectionResult) {
+  _finalListSelection(dynamic finalSelectionResult) {
     print(finalSelectionResult.length.toString());
   }
 }
+
+List<User> users = [
+  User(name: "Mohammed"),
+  User(name: "Mahmoud"),
+  User(name: "Karim"),
+  User(name: "eman"),
+  User(name: "osama"),
+  User(name: "mohsen"),
+  User(name: "Mostafa"),
+  User(name: "Abdullaha"),
+  User(name: "Ibrahim"),
+];

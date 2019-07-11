@@ -8,14 +8,3 @@ class User extends CheckBoxModel {
   }
 }
 
-List<User> users = [
-  User(name: "Mohammed"),
-  User(name: "Mahmoud"),
-  User(name: "Karim"),
-  User(name: "eman"),
-  User(name: "osama"),
-  User(name: "mohsen"),
-  User(name: "Mostafa"),
-  User(name: "Abdullaha"),
-  User(name: "Ibrahim"),
-];

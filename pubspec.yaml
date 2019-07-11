@@ -1,8 +1,8 @@
 name: chip_list_choice
 description: A new Flutter plugin.
 version: 0.0.1
-author:
-homepage:
+author: Mohammed Mahmoud <mohammed.95mahmoud@gmail.com>
+homepage: https://github.com/mohammedgmgn/ChipListChoice
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

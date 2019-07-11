@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 class CustomCheckBox<T> extends StatefulWidget {
   bool checked;
