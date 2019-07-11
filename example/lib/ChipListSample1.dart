@@ -14,7 +14,7 @@ class ChipListSample1State extends State<ChipListSample1> {
   @override
   Widget build(BuildContext context) {
     return ChipListChoice(
-        title: "Users",
+        title: "Users/**/",
         usersDataSet: users.toSet(),
         finalListResult: _finalListSelection,
         color: Colors.cyan);
