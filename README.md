@@ -48,6 +48,22 @@ List<User> users = [
 
 
 
+### 1 - Depend on it
+
+##### Add it to your package's pubspec.yaml file
+
+```kotlin
+dependencies:
+  chip_list_choice: ^0.0.1
+```
+
+
+### 2 - Install it
+
+##### Install packages from the command line
+```kotlin
+flutter packages get
+```
 
 
 ## Contributing
