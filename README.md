@@ -54,7 +54,7 @@ List<User> users = [
 
 ```kotlin
 dependencies:
-  chip_list_choice: ^0.0.2
+  chip_list_choice: ^0.0.3
 ```
 
 
