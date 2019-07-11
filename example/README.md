@@ -4,13 +4,39 @@ Demonstrates how to use the chip_list_choice plugin.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+```dart
+class ChipListSample1 extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new ChipListSample1State();
+  }
+}
 
-A few resources to get you started if this is your first Flutter project:
+class ChipListSample1State extends State<ChipListSample1> {
+  @override
+  Widget build(BuildContext context) {
+    return ChipListChoice(
+        title: "Users",
+        usersDataSet: users.toSet(),
+        finalListResult: _finalListSelection,
+        color: Colors.cyan);
+  }
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+  _finalListSelection(dynamic finalSelectionResult) {
+    print(finalSelectionResult.length.toString());
+  }
+}
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+List<User> users = [
+  User(name: "Mohammed"),
+  User(name: "Mahmoud"),
+  User(name: "Karim"),
+  User(name: "eman"),
+  User(name: "osama"),
+  User(name: "mohsen"),
+  User(name: "Mostafa"),
+  User(name: "Abdullaha"),
+  User(name: "Ibrahim"),
+];
+
+```
