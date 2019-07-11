@@ -3,6 +3,53 @@
 # ChipListChoice
 ![Output sample](https://github.com/mohammedgmgn/ChipListChoice/blob/master/finaldemo%20(1).gif)
 
+
+
+
+##### ChipListChoice example
+
+```dart
+class ChipListSample1 extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new ChipListSample1State();
+  }
+}
+
+class ChipListSample1State extends State<ChipListSample1> {
+  @override
+  Widget build(BuildContext context) {
+    return ChipListChoice(
+        title: "Users",
+        usersDataSet: users.toSet(),
+        finalListResult: _finalListSelection,
+        color: Colors.cyan);
+  }
+
+  _finalListSelection(dynamic finalSelectionResult) {
+    print(finalSelectionResult.length.toString());
+  }
+}
+
+List<User> users = [
+  User(name: "Mohammed"),
+  User(name: "Mahmoud"),
+  User(name: "Karim"),
+  User(name: "eman"),
+  User(name: "osama"),
+  User(name: "mohsen"),
+  User(name: "Mostafa"),
+  User(name: "Abdullaha"),
+  User(name: "Ibrahim"),
+];
+
+```
+
+
+
+
+
+
 ## Contributing
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/mohammedgmgn/ChipListChoice/issues)
 
