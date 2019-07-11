@@ -1,3 +1,4 @@
+import 'package:chip_list_choice/ChipListChoice.dart';
 import 'package:chip_list_choice/CheckBoxModel.dart';
 import 'package:chip_list_choice/ChipListChoice.dart';
 import 'package:flutter/material.dart';
@@ -14,12 +15,11 @@ class ChipListSample1 extends StatefulWidget {
 class ChipListSample1State extends State<ChipListSample1> {
   @override
   Widget build(BuildContext context) {
-    return ChipListChoice.getAddChipList(
-      title: "Users",
-      usersDataSet: users.toSet(),
-      finalListResult: _finalBeneficiaryListSelection,
-      color: Colors.cyan
-    );
+    return ChipListChoice(
+        title: "Users",
+        usersDataSet: users.toSet(),
+        finalListResult: _finalBeneficiaryListSelection,
+        color: Colors.cyan);
   }
 
   _finalBeneficiaryListSelection(dynamic finalSelectionResult) {
