@@ -33,13 +33,6 @@ class ChipListChoiceState <T extends CheckBoxModel> extends State<ChipListChoice
     super.initState();
     selectedUsers=widget.usersDataSet;
     data=widget.usersDataSet.toList();
-
-//    data.addAll(widget.usersDataSet) ;
-    //  selectedUsers.addAll(widget.usersDataSet.toSet()<T>);
-//print(widget.usersDataSet.runtimeType);
-
-    //  data.addAll(widget.usersDataSet);
-//    selectedUsers.addAll(widget.usersDataSet);
   }
 
   @override
@@ -83,7 +76,7 @@ class ChipListChoiceState <T extends CheckBoxModel> extends State<ChipListChoice
     );
   }
 
-  Widget getChips(Set<CheckBoxModel> users) {
+  Widget getChips(Set<T> users) {
     return SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
@@ -95,7 +88,8 @@ class ChipListChoiceState <T extends CheckBoxModel> extends State<ChipListChoice
                 onDeleted: () {
                   setState(() {
                     user.isChecked = false;
-                    widget.finalListResult(selectedUsers);
+                    var result=_getFinalList(users.toList());
+                    widget.finalListResult(result);
                   });
                 },
                 deleteIcon: Icon(
@@ -115,7 +109,7 @@ class ChipListChoiceState <T extends CheckBoxModel> extends State<ChipListChoice
         ));
   }
 
-  Widget getLookUpWidget(CheckBoxModel user) {
+  Widget getLookUpWidget(T user) {
     return Container(
         child: ListTile(
           title: Row(
@@ -132,7 +126,7 @@ class ChipListChoiceState <T extends CheckBoxModel> extends State<ChipListChoice
         ));
   }
 
-  Widget getCheckBox(CheckBoxModel user) {
+  Widget getCheckBox(T user) {
     return CustomCheckBox(
         checked: user.isChecked,
         changesListenerWithData: this,
