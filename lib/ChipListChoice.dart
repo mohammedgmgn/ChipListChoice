@@ -167,7 +167,8 @@ class ChipListChoiceState <T extends CheckBoxModel> extends State<ChipListChoice
                 children: <Widget>[
                   RaisedButton(
                     onPressed: () {
-                      widget.finalListResult(selectedUsers.toList());
+                     var result= _getFinalList(selectedUsers.toList());
+                      widget.finalListResult(result);
                       Navigator.pop(context);
                     },
                     child: Text(
@@ -181,7 +182,6 @@ class ChipListChoiceState <T extends CheckBoxModel> extends State<ChipListChoice
                     child: RaisedButton(
                       onPressed: () {
                         setState(() {
-                          //  selectedUsers=data.toSet();
                           _clearData(data);
                           selectedUsers.clear();
                           widget.finalListResult(selectedUsers.toList());
@@ -214,9 +214,20 @@ class ChipListChoiceState <T extends CheckBoxModel> extends State<ChipListChoice
     }
   }
 
-  void _clearData(List<CheckBoxModel> data) {
+  void _clearData(List<T> data) {
     data.forEach((element) {
       element.isChecked = false;
     });
+  }
+
+  List<T>  _getFinalList(List<T> list) {
+    List<T> result=[];
+
+    list.forEach((element) {
+      if(element.isChecked){
+        result.add(element);
+      }
+    });
+    return result;
   }
 }
