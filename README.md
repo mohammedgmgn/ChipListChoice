@@ -1,4 +1,8 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7d41a28a6774e6ab0b8ace9cab2706b)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mohammedgmgn/ChipListChoice&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7d41a28a6774e6ab0b8ace9cab2706b)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mohammedgmgn/ChipListChoice&amp;utm_campaign=Badge_Grade)[![star this repo](http://githubbadges.com/star.svg?user=boennemann&repo=badges&style=flat)](https://github.com/mohammedgmgn/ChipListChoice)
+[![fork this repo](http://githubbadges.com/fork.svg?user=boennemann&repo=badges&style=flat)](https://github.com/mohammedgmgn/ChipListChoice/fork)
+
+
+
 
 # ChipListChoice
 ![Output sample](https://github.com/mohammedgmgn/ChipListChoice/blob/master/finaldemo%20(1).gif)
