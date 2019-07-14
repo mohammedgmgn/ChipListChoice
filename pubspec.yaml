@@ -1,5 +1,5 @@
 name: chip_list_choice
-description: Flutter widget for representing  picking items as a  chip.
+description: Flutter library for building picking items  as a  chip list options.
 version: 0.0.5
 author: Mohammed Mahmoud <mohammed.95mahmoud@gmail.com>
 homepage: https://github.com/mohammedgmgn/ChipListChoice
