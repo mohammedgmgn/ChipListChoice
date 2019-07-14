@@ -61,7 +61,7 @@ class User extends CheckBoxModel {
 
 ```kotlin
 dependencies:
-  chip_list_choice: ^0.0.4
+  chip_list_choice: ^0.0.5
 ```
 
 
