@@ -46,9 +46,8 @@ List<User> users = [
 class User extends CheckBoxModel {
   final String name;
 
-  User({this.name}) {
-    this.title = name;
-  }
+    User({this.name}) : super(name);
+
 }
 
 ```
