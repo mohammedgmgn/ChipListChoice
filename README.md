@@ -43,6 +43,13 @@ List<User> users = [
   User(name: "Ibrahim"),
 ];
 
+class User extends CheckBoxModel {
+  final String name;
+
+    User({this.name}) : super(name);
+
+}
+
 ```
 
 
