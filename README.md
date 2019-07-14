@@ -72,6 +72,11 @@ dependencies:
 flutter packages get
 ```
 
+### 3 - Import it
+```kotlin
+import 'package:chip_list_choice/ChipListChoice.dart';
+```
+
 
 ## Contributing
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/mohammedgmgn/ChipListChoice/issues)
