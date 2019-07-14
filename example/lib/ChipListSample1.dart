@@ -13,14 +13,14 @@ class ChipListSample1 extends StatefulWidget {
 class ChipListSample1State extends State<ChipListSample1> {
   @override
   Widget build(BuildContext context) {
-    return ChipListChoice(
+    return ChipListChoice<User>(
         title: "Users",
         usersDataSet: users.toSet(),
         finalListResult: _finalListSelection,
         color: Colors.cyan);
   }
 
-  _finalListSelection(dynamic finalSelectionResult) {
+  _finalListSelection(List<User> finalSelectionResult) {
     print(finalSelectionResult.length.toString());
   }
 }

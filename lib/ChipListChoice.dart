@@ -3,37 +3,43 @@ import 'package:flutter/material.dart';
 import 'CheckBoxModel.dart';
 import 'CustomCheckBox.dart';
 
-class ChipListChoice extends StatefulWidget {
-  final Set<CheckBoxModel> usersDataSet;
+class ChipListChoice<T extends CheckBoxModel> extends StatefulWidget {
+  final Set<T> usersDataSet;
   final String title;
   final Color color;
   final Function finalListResult;
 
   const ChipListChoice(
       {Key key,
-      this.title,
-      this.usersDataSet,
-      this.finalListResult,
-      this.color = Colors.cyan})
+        this.title,
+        this.usersDataSet,
+        this.finalListResult,
+        this.color = Colors.cyan})
       : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return ChipListChoiceState();
+    return ChipListChoiceState<T>();
   }
 }
 
-class ChipListChoiceState extends State<ChipListChoice>
+class ChipListChoiceState <T extends CheckBoxModel> extends State<ChipListChoice>
     implements CheckChangesListenerWithData {
-  Set<CheckBoxModel> selectedUsers = Set();
-  List<CheckBoxModel> data = [];
+  Set<T> selectedUsers = Set();
+  List<T> data = [];
 
   @override
   void initState() {
     super.initState();
+    selectedUsers=widget.usersDataSet;
+    data=widget.usersDataSet.toList();
 
-    data.addAll(widget.usersDataSet);
-    selectedUsers.addAll(widget.usersDataSet);
+//    data.addAll(widget.usersDataSet) ;
+    //  selectedUsers.addAll(widget.usersDataSet.toSet()<T>);
+//print(widget.usersDataSet.runtimeType);
+
+    //  data.addAll(widget.usersDataSet);
+//    selectedUsers.addAll(widget.usersDataSet);
   }
 
   @override
@@ -84,27 +90,27 @@ class ChipListChoiceState extends State<ChipListChoice>
           children: users
               .where((user) => user.isChecked)
               .map((user) => Padding(
-                  padding: EdgeInsets.all(3.0),
-                  child: Chip(
-                    onDeleted: () {
-                      setState(() {
-                        user.isChecked = false;
-                        widget.finalListResult(selectedUsers);
-                      });
-                    },
-                    deleteIcon: Icon(
-                      Icons.close,
-                      color: Colors.white,
-                      size: 20.0,
-                    ),
-                    deleteIconColor: Colors.white,
-                    label: Text(
-                      user.title,
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    padding: EdgeInsets.all(5.0),
-                    backgroundColor: widget.color,
-                  )))
+              padding: EdgeInsets.all(3.0),
+              child: Chip(
+                onDeleted: () {
+                  setState(() {
+                    user.isChecked = false;
+                    widget.finalListResult(selectedUsers);
+                  });
+                },
+                deleteIcon: Icon(
+                  Icons.close,
+                  color: Colors.white,
+                  size: 20.0,
+                ),
+                deleteIconColor: Colors.white,
+                label: Text(
+                  user.title,
+                  style: TextStyle(color: Colors.white),
+                ),
+                padding: EdgeInsets.all(5.0),
+                backgroundColor: widget.color,
+              )))
               .toList(),
         ));
   }
@@ -112,18 +118,18 @@ class ChipListChoiceState extends State<ChipListChoice>
   Widget getLookUpWidget(CheckBoxModel user) {
     return Container(
         child: ListTile(
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Expanded(
-              child: Text(
-            user.title,
-            style: TextStyle(color: Colors.black),
-          )),
-          getCheckBox(user)
-        ],
-      ),
-    ));
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Expanded(
+                  child: Text(
+                    user.title,
+                    style: TextStyle(color: Colors.black),
+                  )),
+              getCheckBox(user)
+            ],
+          ),
+        ));
   }
 
   Widget getCheckBox(CheckBoxModel user) {
@@ -161,7 +167,7 @@ class ChipListChoiceState extends State<ChipListChoice>
                 children: <Widget>[
                   RaisedButton(
                     onPressed: () {
-                      widget.finalListResult(selectedUsers);
+                      widget.finalListResult(selectedUsers.toList());
                       Navigator.pop(context);
                     },
                     child: Text(
@@ -178,7 +184,7 @@ class ChipListChoiceState extends State<ChipListChoice>
                           //  selectedUsers=data.toSet();
                           _clearData(data);
                           selectedUsers.clear();
-                          widget.finalListResult(selectedUsers);
+                          widget.finalListResult(selectedUsers.toList());
                           Navigator.pop(context);
                         });
                       },
